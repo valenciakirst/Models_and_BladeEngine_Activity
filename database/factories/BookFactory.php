@@ -10,24 +10,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class BookFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Book::class;
+
     public function definition(): array
     {
         return [
-            // 'name' => fake()->name(),
-            // 'email' => fake()->unique(),->safeEmail(),
-            // 'email_verified_at' => now(),
-            // 'password' => static::$password  ??= Hash:
-            // 'remember_token' => Str:random(10),
-            'isbn' => $this->faker->unique()->isbn10,
-            'title' => $this->faker->sentence(3),
+            'isbn' => $this->faker->isbn10,
+            'title' => $this->faker->sentence,
             'author' => $this->faker->name,
-            'description' => $this->faker->paragraph(3),
-            'date_published' => $this->faker->date(),
+            'description' => $this->faker->paragraph,
+            'date_published' => $this->faker->date,
         ];
     }
 }

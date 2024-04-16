@@ -1,3 +1,9 @@
 <div>
-    <!-- Happiness is not something readymade. It comes from your own actions. - Dalai Lama -->
-</div>
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> Books. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>
